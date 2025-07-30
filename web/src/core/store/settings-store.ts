@@ -9,12 +9,12 @@ const SETTINGS_KEY = "deerflow.settings";
 
 const DEFAULT_SETTINGS: SettingsState = {
   general: {
-    autoAcceptedPlan: false,
+    autoAcceptedPlan: true,
     enableDeepThinking: false,
-    enableBackgroundInvestigation: false,
-    maxPlanIterations: 1,
-    maxStepNum: 3,
-    maxSearchResults: 3,
+    enableBackgroundInvestigation: true,
+    maxPlanIterations: 2,
+    maxStepNum: 5,
+    maxSearchResults: 10,
     reportStyle: "academic",
   },
   mcp: {

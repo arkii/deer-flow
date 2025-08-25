@@ -78,6 +78,9 @@ def _create_llm_use_conf(llm_type: LLMType, conf: Dict[str, Any]) -> BaseChatMod
     # Handle SSL verification settings
     verify_ssl = merged_conf.pop("verify_ssl", True)
 
+    # Add anthropic beta header for extended context
+    merged_conf["default_headers"] = {"anthropic-beta": "context-1m-2025-08-07"}
+
     # Create custom HTTP client if SSL verification is disabled
     if not verify_ssl:
         http_client = httpx.Client(verify=False)
